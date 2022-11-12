@@ -3,4 +3,51 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
+}
+body {
+  background-color: #222831;
+  color: #eeeeee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: rgba(57, 62, 70, 0.7);
+  width: 60vh;
+  padding: 10px 20px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.container h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.boxBtn {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  background-color: #222831;
+  border-radius: 3px;
+  padding: 0 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.btn:active {
+  background-color: #22283177;
+}
+.decrease {
+  color: #d32f2fc7;
+}
+.increase {
+  color: #8bc34ac0;
 }
