@@ -1,7 +1,9 @@
 const btn = document.querySelectorAll(".btn");
-const counter = document.querySelector(".number");
+const counter = document.querySelector(".counter");
 
-let newNumber = 0;
+let newNumber = JSON.parse(localStorage.getItem("count"));
+
+counter.textContent = newNumber;
 
 // Get the requested class and apply the command
 btn.forEach((e) => {
@@ -10,6 +12,9 @@ btn.forEach((e) => {
     if (classResolve.contains("increase")) newNumber++;
     else if (classResolve.contains("decrease")) newNumber--;
     else newNumber = 0;
+
     counter.textContent = newNumber;
+
+    localStorage.setItem("count", JSON.stringify(newNumber));
   });
 });
