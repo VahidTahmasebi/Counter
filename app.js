@@ -1,5 +1,6 @@
 const btn = document.querySelectorAll(".btn");
 const counter = document.querySelector(".counter");
+const description = document.querySelector(".container h1");
 
 let newNumber = JSON.parse(localStorage.getItem("count"));
 
@@ -16,5 +17,12 @@ btn.forEach((e) => {
     counter.textContent = newNumber;
 
     localStorage.setItem("count", JSON.stringify(newNumber));
+
+    // Change the color of the description according to the number
+    counter.textContent > 0
+      ? (description.style.color = "#8bc34ac0")
+      : counter.textContent < 0
+      ? (description.style.color = "#d32f2fc7")
+      : (description.style.color = "#eeeeee");
   });
 });
